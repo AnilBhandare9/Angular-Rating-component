@@ -17,7 +17,15 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "ang-rating": [
+        "dist/ang-rating"
+      ],
+      "ang-rating/*": [
+        "dist/ang-rating/*"
+      ]
+    }
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,

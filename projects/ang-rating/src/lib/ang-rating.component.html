@@ -1,0 +1,31 @@
+<mat-card>
+    <mat-card-content>
+      <mat-card-title>{{type }}</mat-card-title>
+      <div *ngIf="type == 'dropdown'" class="dropdown-block">
+        <mat-select placeholder="Select rating" [(ngModel)]="_value" (ngModelChange)="update($event,_value)" [ngClass]="{'disabled': !input}">
+          <mat-option *ngFor="let item of items" [value]="item">
+            {{item}} {{title}}
+          </mat-option>
+        </mat-select>
+      </div>
+      <div *ngIf="type == 'number'" class="number-block">
+        <ul class="rating-list">
+          <li *ngFor="let item of items; let i = index" (click)="update($event,item)" [ngClass]="{'disabled': !input}">
+            <span class="rating-icon" [style.background-color]="indxValue >= i ? rateColor : ''">
+              <!-- <div class="rating-number">{{item | positivenumber}}</div> -->
+              <div class="rating-number">{{item}}</div>
+            </span>
+          </li>
+        </ul>
+      </div>
+      <div *ngIf="type != 'number' && type != 'dropdown'" class="icon-block">
+        <ul class="rating-list">
+          <li *ngFor="let item of items; let i = index" (click)="update($event,item)" [ngClass]="{'disabled': !input}">
+            <span class="rating-icon" [style.color]="indxValue >= i ? rateColor : ''">
+              <i class="material-icons">{{type}}</i>
+            </span>
+          </li>
+        </ul>
+      </div>
+    </mat-card-content>
+  </mat-card>
