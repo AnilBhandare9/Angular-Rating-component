@@ -18,7 +18,7 @@ Author
 # Installation
 Install it with npm
 
-```npm install ang-rating ```
+```  npm install ang-rating  ```
 
 # Basic usage:
 Import  ` AngRatingModule` in the root module
@@ -76,7 +76,7 @@ In your template
 
 It can be used with typescript file pass the value to rating direcive, for example:
 
-   ```
+  ``
    this.ratingThumsUp = {
         type: 'star',
         value: 30,
@@ -85,8 +85,9 @@ It can be used with typescript file pass the value to rating direcive, for examp
         step: 10,
         input: true,
         color: ['#ff0000', '#ffa500', '#ffd280', '#008000']
-    };
-    ```
+    }; 
+    ``
+    
 
 
 
